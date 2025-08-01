@@ -1,34 +1,38 @@
-/* Aiko AI Website Styling - style.css */ body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #ffe1f1, #f9dfff); display: flex; justify-content: center; align-items: center; height: 100vh; color: #333; }
+/* Aiko AI Website Styling - style.css (Dark & Stylish for Login/Register) */
 
-.container { background: #fff; border-radius: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); padding: 30px; width: 90%; max-width: 400px; display: flex; flex-direction: column; gap: 15px; animation: fadeIn 0.5s ease-in; }
+body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #121212; display: flex; justify-content: center; align-items: center; height: 100vh; color: #f5f5f5; }
+
+.container { background: #1e1e1e; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); padding: 30px; width: 90%; max-width: 400px; display: flex; flex-direction: column; gap: 15px; animation: fadeIn 0.5s ease-in; border: 1px solid #2c2c2c; }
 
 .hidden { display: none; }
 
-h1, h2 { text-align: center; color: #ff69b4; }
+h1, h2 { text-align: center; color: #ff66c4; }
 
-input[type="text"], input[type="password"] { padding: 10px; border: 2px solid #ffb6c1; border-radius: 10px; font-size: 16px; outline: none; }
+input[type="text"], input[type="password"] { padding: 12px; background: #2b2b2b; border: 1px solid #3a3a3a; border-radius: 8px; font-size: 16px; color: #f5f5f5; outline: none; transition: border 0.3s ease; }
 
-button { padding: 10px; background: #ff69b4; color: white; border: none; border-radius: 10px; cursor: pointer; transition: background 0.3s; }
+input[type="text"]:focus, input[type="password"]:focus { border-color: #ff66c4; }
 
-button:hover { background: #ff1493; }
+button { padding: 10px; background: #ff66c4; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background 0.3s ease; }
 
-#chat-box { height: 300px; overflow-y: auto; background: #fff0f5; padding: 15px; border-radius: 10px; display: flex; flex-direction: column; gap: 10px; border: 1px solid #ffc0cb; }
+button:hover { background: #ff3399; }
+
+#chat-box { height: 300px; overflow-y: auto; background: #181818; padding: 15px; border-radius: 10px; display: flex; flex-direction: column; gap: 10px; border: 1px solid #303030; }
 
 .chat-message { padding: 10px; border-radius: 10px; max-width: 75%; word-wrap: break-word; }
 
-.user { align-self: flex-end; background: #e6e6fa; }
+.user { align-self: flex-end; background: #2e2e2e; color: #f5f5f5; }
 
-.aiko { align-self: flex-start; background: #ffe4e1; }
+.aiko { align-self: flex-start; background: #3a1a30; color: #f5f5f5; }
 
 #chat-form { display: flex; gap: 10px; }
 
 #user-input { flex-grow: 1; }
 
-#header { display: flex; justify-content: space-between; align-items: center; }
+#header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 
 @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 
-a { color: #ff69b4; text-decoration: none; }
+a { color: #ff66c4; text-decoration: none; font-weight: bold; text-align: center; }
 
 a:hover { text-decoration: underline; }
 

@@ -1,40 +1,129 @@
-/* Modern Glassy Login/Register Style - Aiko AI */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
 
-body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: url('https://images.unsplash.com/photo-1604023488703-4c9cc12c2da3?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed; background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; color: #fff; }
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(./bg.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.container { backdrop-filter: blur(15px); background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); padding: 30px; width: 90%; max-width: 400px; display: flex; flex-direction: column; gap: 15px; animation: fadeIn 0.6s ease-in; color: #fff; }
+.container
+{
+    width: 400px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 
-.hidden { display: none; }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-h1, h2 { text-align: center; color: #ffffff; }
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
 
-input[type="text"], input[type="password"] { padding: 12px; background: rgba(255, 255, 255, 0.2); border: none; border-radius: 10px; font-size: 16px; color: #fff; outline: none; transition: 0.3s ease; }
+h2
+{
+    color: #ffff;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
 
-input::placeholder { color: #ddd; }
+.form-group
+{
+    position: relative;
+    width: 330px;
+    margin: 30px 0;
+    border-bottom: 3px solid #ffff;
+}
 
-input[type="text"]:focus, input[type="password"]:focus { background: rgba(255, 255, 255, 0.3); }
+.form-group input
+{
+    width: 100%;
+    height: 50px;
+    padding: 0 35px 0 10px;
+    font-size: 1.2em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
 
-button { padding: 12px; background: #ffffff; color: #333; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; transition: 0.3s ease; }
+.form-group label
+{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #fff;
+    transition: 0.5s;
+}
 
-button:hover { background: #f0f0f0; }
+input:focus ~ label,
+input:valid ~ label
+{
+    top: -5px;
+}
 
-#chat-box { height: 300px; overflow-y: auto; background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 10px; display: flex; flex-direction: column; gap: 10px; border: 1px solid rgba(255, 255, 255, 0.3); }
+.form-group i
+{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #ffff;
+    font-size: 1.2em;
+}
 
-.chat-message { padding: 10px; border-radius: 10px; max-width: 75%; word-wrap: break-word; color: #fff; }
+p
+{
+    text-align: center;
+    color: #fff;
+    margin: 10px 0;
+}
 
-.user { align-self: flex-end; background: rgba(0, 0, 255, 0.4); }
+p>a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
 
-.aiko { align-self: flex-start; background: rgba(255, 105, 180, 0.3); }
+p>a:hover
+{
+    text-decoration: underline;
+    font-style: italic;
+}
 
-#chat-form { display: flex; gap: 10px; }
+#btn
+{
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
 
-#user-input { flex-grow: 1; }
-
-#header { display: flex; justify-content: space-between; align-items: center; }
-
-a { color: #fff; text-decoration: underline; text-align: center; font-size: 14px; }
-
-a:hover { text-decoration: none; }
-
-@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-
+#btn:hover
+{
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}

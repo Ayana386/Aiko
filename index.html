@@ -1,40 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Login Form</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1024, initial-scale=1.0">
+  <title>Aiko Login/Register</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
 </head>
 <body>
-     
-    <div class="container">
-        <h2>Login</h2>
+  <div class="container">
+    <h2 id="form-title">Login</h2>
 
-        <form action="">
-            
-            <div class="form-group">
-                <input type="email" required>
-                <label for="">Email</label>
-                <i class="fa-solid fa-envelope"></i>
-            </div>
+    <!-- Login Form -->
+    <form id="login-form">
+      <div class="form-group">
+        <input type="email" required>
+        <label>Email</label>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
 
-            <div class="form-group">
-                <input type="password" required>
-                <label for="">Password</label>
-                <i class="fa-solid fa-lock"></i>
-            </div>
+      <div class="form-group">
+        <input type="password" required>
+        <label>Password</label>
+        <i class="fa-solid fa-lock"></i>
+      </div>
 
-            <p><input type="checkbox">Remember Me <a href="#">Forget Password</a></p>
+      <p><input type="checkbox"> Remember Me <a href="#">Forget Password</a></p>
+      <input id="btn" type="submit" value="Login">
+      <p>Don't have an account? <a href="#" id="switch-to-register">Register</a></p>
+    </form>
 
-            <input id="btn" type="submit" value="Login">
+    <!-- Register Form -->
+    <form id="register-form" class="hidden">
+      <div class="form-group">
+        <input type="email" required>
+        <label>Email</label>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
 
-            <p>Don't have a account? <a href="#">Register</a></p>
+      <div class="form-group">
+        <input type="password" required>
+        <label>Password</label>
+        <i class="fa-solid fa-lock"></i>
+      </div>
 
-        </form>
-    </div>
+      <div class="form-group">
+        <input type="password" required>
+        <label>Confirm Password</label>
+        <i class="fa-solid fa-lock"></i>
+      </div>
 
+      <input id="btn" type="submit" value="Register">
+      <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+    </form>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById("login-form");
+    const registerForm = document.getElementById("register-form");
+    const formTitle = document.getElementById("form-title");
+
+    document.getElementById("switch-to-register").addEventListener("click", function(e) {
+      e.preventDefault();
+      loginForm.classList.add("hidden");
+      registerForm.classList.remove("hidden");
+      formTitle.innerText = "Register";
+    });
+
+    document.getElementById("switch-to-login").addEventListener("click", function(e) {
+      e.preventDefault();
+      registerForm.classList.add("hidden");
+      loginForm.classList.remove("hidden");
+      formTitle.innerText = "Login";
+    });
+  </script>
 </body>
 </html>
